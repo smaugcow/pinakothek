@@ -9,7 +9,7 @@ sudo apt install graphviz -y
 2. **Create and Activate a Python Virtual Environment:**
 
 ```bash
-python -m venv myenv
+python3 -m venv myenv
 source myenv/bin/activate
 ```
 
