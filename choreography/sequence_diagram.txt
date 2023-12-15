@@ -1,0 +1,52 @@
+@startuml Pinakothek
+
+participant User
+participant "Pinakothek Web App" as App
+participant "SQLite Database" as DB
+
+User -> App: Access Pinakothek
+User -> App: Register / Log In
+activate App
+App -> DB: Django Authentication
+alt User not found
+    DB --> App: User not found
+    App --> User: Display "User not found" message
+else User is not registered
+    DB --> App: User not registered
+    App --> User: Display "User not registered" message
+else User as Admin
+    alt Admin Access
+        User -> App: Admin Access
+        App --> User: Allow admin actions
+    else User tries to download content
+        User -> App: Download Media
+        App -> DB: Retrieve Media Data
+        alt Error in download
+            DB --> App: Error fetching data
+            App --> User: Display "Error downloading content" message
+        else Successful download
+            DB --> App: Media Data
+            App --> User: Download Media
+        end
+    end
+end
+
+opt User interacts with content
+    User -> App: Upload Media
+    activate App
+    App -> App: Media Processing (Pillow/FFmpeg)
+    App -> DB: Store Media Info
+    deactivate App
+
+    User -> App: View Media Gallery
+    App -> DB: Retrieve Media Data
+    DB --> App: Media Data
+    App --> User: Display Media
+
+    User -> App: Manage Content
+    App -> App: Edit/Delete Media
+    App -> DB: Update/Delete Media Info
+end
+
+deactivate App
+@enduml
