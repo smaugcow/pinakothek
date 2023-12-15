@@ -22,7 +22,7 @@ pip install graphviz
 4. **Generate Diagram Using Python Script:**
 
 ```bash
-python3 generate_diagram.py
+python3 structure_diagram.py
 ```
 
 ### Additional Information:
