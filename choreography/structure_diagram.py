@@ -53,3 +53,5 @@ dot.edge('Admin', 'Authorization')
 
 # Save and render the diagram
 dot.render('pinakothek_structure_updated', format='png', view=True)
+
+print("Goob bay")
