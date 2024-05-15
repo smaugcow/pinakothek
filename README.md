@@ -1,16 +1,16 @@
-# Пинакотека
+# Pinakothek
 
-Это веб-приложение предоставляет возможность загружать, хранить и просматривать фотографии и видео контент. Оно создано с использованием Django в качестве бэкенда и предоставляет удобный интерфейс для пользователей для работы с медиафайлами.
+This web application provides the ability to download, store and view photos and video content. It was created using Django as a backend and provides a user-friendly interface for users to work with media files.
 
-## Особенности
+## Features
 
-- **Авторизация и Аутентификация:** Регистрация новых пользователей и вход для существующих через встроенную систему аутентификации Django.
-- **Управление Контентом:** Загрузка, удаление, редактирование и описание медиафайлов.
-- **Отображение Контента:** Галерея для просмотра фотографий и видео с поддержкой пагинации и фильтрации.
-- **Обработка Медиа:** Используются библиотеки Pillow и FFmpeg для работы с изображениями и видео соответственно.
-- **Хранение Данных:** SQLite используется для хранения информации о загруженных файлах.
+- **Authorization and Authentication:** Register new users and log in for existing ones through Django's built-in authentication system.
+- **Content Management:** Uploading, deleting, editing, and describing media files.
+- **Content Display:** Gallery for viewing photos and videos with pagination and filtering support.
+- **Media Processing:** Pillow and FFmpeg libraries are used to work with images and videos, respectively.
+- **Data Storage:** SQLite is used to store information about uploaded files.
 
-## Требования
+## Requirements
 
 - Python 3.x
 - Django
@@ -18,32 +18,32 @@
 - FFmpeg
 - SQLite
 
-## Установка и Запуск
+## Installation and Launch
 
-1. Клонируйте репозиторий: 
-``` bash
+1. Clone the repository:
+`` bash
 git clone https://github.com/your_username/your_project.git
 ```
-2. Установите зависимости: 
-``` bash
+2. Install dependencies:
+`` bash
 pip install -r requirements.txt
-```
-3. Проведите миграции базы данных: 
-``` bash
+``
+3. Perform database migrations:
+`` bash
 python manage.py migrate
-```
-4. Запустите сервер:
-``` bash
+``
+4. Start the server:
+`` bash
 python manage.py runserver
-```
+``
 
-## Использование
+## Usage
 
-1. Зарегистрируйте новый аккаунт или войдите в существующий.
-2. Загрузите фотографии и видео через интерфейс приложения.
-3. Просматривайте, редактируйте и управляйте контентом через галерею.
+1. Register a new account or log in to an existing one.
+2. Upload photos and videos via the app interface.
+3. View, edit and manage content through the gallery.
 
 
-## Дополнительная Информация
+## Additional Information
 
-- Для вопросов или помощи обратитесь к [автору](mailto:cima19056@gmail.com).
+- For questions or help, contact [the author](mailto:cima19056@gmail.com ).
