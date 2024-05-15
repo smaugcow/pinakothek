@@ -5,7 +5,7 @@ participant "Pinakothek Web App" as App
 participant "SQLite Database" as DB
 
 User -> App: Access Pinakothek
-User -> App: Register / Log In
+User -> App: Register / LogIn
 activate App
 App -> DB: Django Authentication
 alt User not found
