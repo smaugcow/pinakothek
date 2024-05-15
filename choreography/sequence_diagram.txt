@@ -34,7 +34,7 @@ end
 opt User interacts with content
     User -> App: Upload Media
     activate App
-    App -> App: Media Processing (Pillow/FFmpeg)
+    App -> App: Media Processing
     App -> DB: Store Media Info
     deactivate App
 
