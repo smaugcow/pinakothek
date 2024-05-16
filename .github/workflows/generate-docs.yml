@@ -21,12 +21,10 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get install doxygen
       - name: Generate Documentation
-        run: doxygen Doxyfile
-      - name: Synchronize html to docs
-        run: |
-          cp -r html/* docs/
-      - name: Adjust directory structure
-        run: |
+        run: | 
+          doxygen Doxyfile
+          cd docs
+          cp -r html/ docs/
           rm -rf html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

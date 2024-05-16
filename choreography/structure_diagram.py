@@ -28,7 +28,7 @@ dot.node('Fields3', 'Fields: \n- Gallery View\n- Pagination\n- Filtering', shape
 dot.node('Fields4', 'Fields: \n- Pillow (Images)\n- FFmpeg (Videos)', shape='box')
 dot.node('Fields5', 'Fields: \n- SQLite\n- Stored Files Info', shape='box')
 
-# Add dependency connections between abstraction blocks and entities
+# add dependency connections between abstraction blocks and entities
 dot.edge('Pinakothek', 'Authorization')
 dot.edge('Pinakothek', 'ContentManagement')
 dot.edge('Pinakothek', 'ContentDisplay')
