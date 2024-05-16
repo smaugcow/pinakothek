@@ -43,7 +43,7 @@ dot.edge('ContentDisplay', 'Fields3')
 dot.edge('MediaProcessing', 'Fields4')
 dot.edge('DataStorage', 'Fields5')
 
-# Add connections between entities and abstraction blocks
+# add connections between entities and abstraction blocks
 dot.edge('User', 'Authorization')
 dot.edge('Frontend', 'ContentDisplay')
 dot.edge('Content', 'ContentManagement')
