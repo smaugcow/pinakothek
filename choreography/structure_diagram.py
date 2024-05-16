@@ -51,7 +51,7 @@ dot.edge('Backend', 'MediaProcessing')
 dot.edge('DB', 'DataStorage')
 dot.edge('Admin', 'Authorization')
 
-# Save and render the diagram
+# save and render the diagram
 dot.render('pinakothek_structure_updated', format='png', view=True)
 
 print("Goob bay")
